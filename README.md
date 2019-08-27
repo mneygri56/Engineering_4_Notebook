@@ -1,2 +1,2 @@
 # This is my Engineering 4 Notebook
-This is where all of my stuff will go!
+This is where all of our stuff will go!
