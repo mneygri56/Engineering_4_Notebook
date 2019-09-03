@@ -62,6 +62,3 @@ def main():
     else:
         raise SystemExit
 main()
-
-
-            
