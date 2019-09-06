@@ -1,6 +1,7 @@
 #!bin/bash
 
 # this script makes 2 leds blink 10 times each
+# ffs
 
 gpio mode 0 out
 gpio mode 1 out
