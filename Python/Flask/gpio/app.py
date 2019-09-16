@@ -8,7 +8,8 @@ GPIO.setup(18,GPIO.OUT)
 
 blueState = False
 redState = False
-
+blueMsg = "Blue is Off"
+redMsg = "Red is Off"
 app = Flask(__name__)
 
 @app.route("/", methods=["GET","POST"])
@@ -40,7 +41,7 @@ def index():
 	else:
 		GPIO.output(17,GPIO.LOW)
 		GPIO.output(18,GPIO.LOW)
-	return render_template("index.html", msg=blueMsg + "and" + redMsg, blueLed=blueState, redLed=redState)
+	return render_template("index.html", msg=blueMsg + " and " + redMsg, blueLed=blueState, redLed=redState)
 if __name__ == "__main__":
 	app.run(host="0.0.0.0", port=80)
 
