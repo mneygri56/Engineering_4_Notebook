@@ -91,7 +91,7 @@ while(True):
     print("Product:\t" + str(doMath(float(numOne), float(numTwo), 3))) 
     print("Quotient:\t" + str(doMath(float(numOne), float(numTwo), 4)))
     print("Modulo:\t\t" + str(doMath(float(numOne), float(numTwo), 5)))
-  
+    
   ```
   
 </details>
@@ -146,6 +146,9 @@ while(True):
         print("Roots: "+str(newRoots[0:]))
     else:
         raise SystemExit
+        
     ```
+ 
  </details>
+ 
  ### Hello Github
