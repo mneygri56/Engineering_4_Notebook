@@ -33,7 +33,7 @@ This boi is a die roller written in Python, we wrote a program to roll a die and
 <details>
   <summary>How to Roll a Die in Python (Ten Steps) (With Pictures!)</summary>
   
-```
+```python
   
 #Automatic Dice Roller
 #Written by David and Miles
