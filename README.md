@@ -147,8 +147,17 @@ while(True):
     else:
         raise SystemExit
         
-    ```
+  ```
  
  </details>
  
- ### Hello Github
+ ### Hello Git
+This project was setting up github on the pi. Github has sinced ceased to function for no reason, so we decided to make our own github:
+
+1st, put the changed files onto a flash drive (The "Hub")
+
+2nd, download them onto another computer (The "Git")
+
+3rd, Commit and Push
+
+Yay "git"+"hub"!!!
