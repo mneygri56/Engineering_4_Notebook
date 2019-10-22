@@ -160,6 +160,6 @@ This project was setting up github on the pi. Github has sinced ceased to functi
 
 3rd, Commit and Push
 
-Yay "hub""git"TM!!!
+Yay hubGit™!!!
 
 ### Git Forks and Clones
