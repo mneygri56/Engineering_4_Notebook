@@ -93,7 +93,9 @@ while(True):
     print("Modulo:\t\t" + str(doMath(float(numOne), float(numTwo), 5)))
   
   ```
-  </details>
+  
+</details>
+
 ### Quadratic Solver
 
 Ever been in math class and wanted an easy way to calculate those weird quadratics, well you've got it.
