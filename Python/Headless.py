@@ -1,8 +1,11 @@
+#Accelerometer graph
+#Written by David and Miles
+
 import time
 
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
-
+#libraries
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
@@ -51,7 +54,7 @@ def realMap(number, lowFirst, highFirst,lowSecond, highSecond):
     newNumber =(number-lowFirst)/(highFirst-lowFirst)*(highSecond-lowSecond)+lowSecond
     return newNumber
 
-while True:
+while True: #gets the data from the accelerometer, then outputs it to the OLED screen
     
     accel, mag = lsm303.read()
     accel_x, accel_y, accel_z = accel
@@ -65,21 +68,19 @@ while True:
         
     
     #map the acceleration to a better outline
-    #x = realMap(accel_x, -1000, 1000, 0, 100)
     y = realMap(accel_y, -1000, 1000, 0, 32)
-    #z = realMap(accel_z, -1000, 1000, 0, 100)
+    #put the values on the graph
     yPos = 48-y
     values.append(yPos)
     currX+=1
     startX = currX-112
+    #draw all the lines to make a line plot
     if startX<0:
         startX = 0
     for xPos in range(112):
         if(xPos>currX-1):
             break
         draw.line((16+xPos, values[startX+xPos-1], xPos+17, values[startX+xPos]), fill = 255)
-    #screenText = "X:"+str(round(x,2))+"\nY:"+str(round(y, 2))+"\nZ:"+str(round(z, 2))
-    #draw.text((10,10),  "Accel Data:\n"+screenText, font=font, fill=125)
     disp.image(image)
     disp.display()
     

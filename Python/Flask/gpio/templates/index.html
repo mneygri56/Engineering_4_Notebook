@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<style>
+	<style> <!-- designs the buttons and sets up location stuff for them -->
 		.redButton{
 		background-color: #808080;
 		color: #F00;
@@ -26,12 +26,12 @@
 
 		}
 	</style>
-	<title>GPIO with Flask!</title>
+	<title>GPIO with Flask!</title> <!-- what shows up on the tab of the browser -->
 </head>
-	<body>
+	<body> <!-- creates the buttons and sets up what happens when they are pushed -->
 		<div>
 		<center><h1>{{msg}}</h1>
-		<img src="https://i.redd.it/ku1neu504sh01.jpg" alt="backend-frontend ayy lmao" style="width:322px;height:445px">
+		<img src="https://i.redd.it/ku1neu504sh01.jpg" alt="backend-frontend ayy lmao" style="width:322px;height:445px"> <!-- self-roast in the form of an image comparing the front-end(pretty good) and the back-end(this file) -->
 		</center>
 		<form method="POST">
 			<button align="left" type="submit" class="blueButton"  name="blue" value="blueLed">Blue</button>

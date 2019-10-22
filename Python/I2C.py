@@ -1,8 +1,11 @@
+#Accelerometer numerical out
+#Written by David and Miles
+
 import time
 
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
-
+#libraries
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
@@ -39,17 +42,21 @@ font = ImageFont.load_default()
 draw = ImageDraw.Draw(image)
 
 #start of real code
+#map number to bounds
 def realMap(number, lowFirst, highFirst,lowSecond, highSecond):
     newNumber =(number-lowFirst)/(highFirst-lowFirst)*(highSecond-lowSecond)+lowSecond
     return newNumber
 
-while True:
+while True: #gets the accelerometer data, outputs it to the OLED in text form
+	#reset the screen by drawing a rectangle
     draw.rectangle((0,0,width,height), outline=0, fill=0)
     accel, mag = lsm303.read()
+    #get the accelerations and map them to the gravity thing
     accel_x, accel_y, accel_z = accel
     x = realMap(accel_x, -1000, 1000, -9.81, 9.81)
     y = realMap(accel_y, -1000, 1000, -9.81, 9.81)
     z = realMap(accel_z, -1000, 1000, -9.81, 9.81)
+    #print out the values to the screen
     screenText = "X:"+str(round(x,2))+"\nY:"+str(round(y, 2))+"\nZ:"+str(round(z, 2))
     draw.text((10,10),  "Accel Data:\n"+screenText, font=font, fill=125)
     disp.image(image)
