@@ -8,7 +8,7 @@ This assigment was an introduction to bash scripts and pi stuff in general
 Our code here wasn't too complicated, so we spiced it up a bit, see for yourself;
 <details>
   <summary>Code</summary>
-	```
+```
 
 	#!/bin/bash
 	str="Hello World!" #declares the string
@@ -18,7 +18,7 @@ Our code here wasn't too complicated, so we spiced it up a bit, see for yourself
 	echo $str #prints the final (massive) string to the terminal
 	done
 
-	```
+```
 
 </details>
 
