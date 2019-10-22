@@ -292,4 +292,7 @@ def main():
 main()
 ```
   
-  </details>
+</details>
+
+#### Problems
+We took a bit of time on figuring out how to clear the terminal. We eventually decided on printing 50 new lines, but then we saw that it was collapsing the 50 into one, so we had to go into settings and make it not collapse it into the one line. Also we wanted to spice our program up a bit and made the user input private, but that line didn't work in shell, so we had to run it in terminal. That was a weird error, but we got it cleared up.
