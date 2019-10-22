@@ -176,23 +176,23 @@ This program was a little tricky, we had to learn how to split strings, so that'
   <summary>Code</summary>
   ```python
     
-#Strings and Loops
-#Written By David and Miles
-while(True):
-	#Get a User Input
-    sentence = input("Enter a Sentence: ")
-    #Split the Input by Spaces
-    splitsentence = sentence.split()
+	#Strings and Loops
+	#Written By David and Miles
+	while(True):
+		#Get a User Input
+	    sentence = input("Enter a Sentence: ")
+	    #Split the Input by Spaces
+	    splitsentence = sentence.split()
 
-    for n in range(len(splitsentence)):
-    	#if the sentence is over, end the system
-        if (splitsentence[n] == "-1"):
-                raise SystemExit
-        #Otherwise, print out each character in the string
-        for x in range(len(splitsentence[n])):
-            print(splitsentence[n][x])
-        #print a - between words
-        print("-")
+	    for n in range(len(splitsentence)):
+		#if the sentence is over, end the system
+		if (splitsentence[n] == "-1"):
+			raise SystemExit
+		#Otherwise, print out each character in the string
+		for x in range(len(splitsentence[n])):
+		    print(splitsentence[n][x])
+		#print a - between words
+		print("-")
      ```
   
   </details>
@@ -203,8 +203,7 @@ This program was to make a "Man Shaped Pinata" game, which is basically (whisper
 #### Code
 <details>
   <summary>Code</summary>
-   ```python
-    
+  ```python
 	#Man Shaped Pinata word guessing game
 	#Written by David and Miles
 	import getpass
