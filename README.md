@@ -203,7 +203,7 @@ This program was to make a "Man Shaped Pinata" game, which is basically (whisper
 #### Code
 <details>
   <summary>Code</summary>
-```python
+   ```python
     
 	#Man Shaped Pinata word guessing game
 	#Written by David and Miles
@@ -288,6 +288,6 @@ This program was to make a "Man Shaped Pinata" game, which is basically (whisper
 	    else:
 		raise SystemExit
 	main()
-```
+       ```
   
   </details>
