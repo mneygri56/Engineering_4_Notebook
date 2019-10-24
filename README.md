@@ -307,7 +307,7 @@ This was an introduction to GPIO using a bash script to blink an LED, it wasn't 
 <details>
 	<summary> Code to Blinkienlichten </summary>
 
-'''python
+```python
 
 	#!bin/bash
 
@@ -327,6 +327,6 @@ This was an introduction to GPIO using a bash script to blink an LED, it wasn't 
 	sleep 0.5 #wait for half a second
 	done
 
-'''
+```
 	
 </details>
