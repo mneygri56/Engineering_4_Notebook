@@ -305,7 +305,7 @@ This was an introduction to GPIO using a bash script to blink an LED, it wasn't 
 
 #### Code
 <details>
-	<summary> Code to Blinkienlichten </summary>
+	<summary> Code to Blinkenlichten </summary>
 
 ```python
 
@@ -338,24 +338,116 @@ This assignment taught us how to use python with GPIO, we want to remember how t
 #### Code
 <details>
 	<summary> Blinkenlichten but python this time </summary>
+
+```python
+
+#Activate LEDs via GPIO
+#Written by David and Miles
+
+import RPi.GPIO as GPIO
+from time import sleep
+#libraries
+GPIO.setmode(GPIO.BOARD) #sets up pins
+GPIO.setup(11,GPIO.OUT)
+GPIO.setup(12,GPIO.OUT)
+
+for i in range(0,10): #runs loop 10 times
+    GPIO.output(12,1) #turns leds on
+    GPIO.output(11,1)
+    sleep(0.5) #half second wait
+    GPIO.output(11,0) #turns leds off
+    GPIO.output(12,0)
+    sleep(0.5) #half second wait
+GPIO.cleanup() #resets gpio
+
+```
+
+</details>
+
+### GPIO pins - SSH
+This assignment was pretty cool, we used our phone to make an LED turn on and off, it was pretty cool to be able to control the pi without actually touching it.
+
+We used an app on our phone to communicate with the pi, there wasn't a code file, it was just turning the leds on and off in the console.
+
+## Start of Flask Stuff
+
+### Hello Flask
+This assignment was to create a website that showed "hello world" when you connected to it.
+
+#### Code
+<details>
+	<summary>Code</summary>
 	
-	```python
-	#Activate LEDs via GPIO
-	#Written by David and Miles
+```python
+	  
+#Hello world via Flask
+#Written by David and Miles
 
-	import RPi.GPIO as GPIO
-	from time import sleep
-	#libraries
-	GPIO.setmode(GPIO.BOARD) #sets up pins
-	GPIO.setup(11,GPIO.OUT)
-	GPIO.setup(12,GPIO.OUT)
+from flask import Flask
+#import the flask library
+app = Flask(__name__)
+#turns on flask
+@app.route("/")
+def hello_world(): #creates function to return hello world
+	return "hello world!"
 
-	for i in range(0,10): #runs loop 10 times
-	    GPIO.output(12,1) #turns leds on
-	    GPIO.output(11,1)
-	    sleep(0.5) #half second wait
-	    GPIO.output(11,0) #turns leds off
-	    GPIO.output(12,0)
-	    sleep(0.5) #half second wait
-	GPIO.cleanup() #resets gpio
-	```
+if __name__ == "__main__": #ports
+	app.run(host="0.0.0.0", port=80)
+```
+
+### GPIO pins - Flask
+
+This Was Hard. We would have had less trouble if we had realized that we could make global variables, but we didn't, it took us like a week to figure out the global variables thing, but the rest was pretty easy. We got to make it look good and function with CSS tags.
+
+#### Code
+
+There are two parts to this code, html and Flask
+
+<details>
+	<summary> html stuff code bois </summary>
+
+```xml
+
+<!doctype html>
+<html>
+<head>
+	<style> <!-- designs the buttons and sets up location stuff for them -->
+		.redButton{
+		background-color: #808080;
+		color: #F00;
+		font-size: 40px;
+		padding: 200px 300px;
+		border-radius: 10px;
+		border: none;
+		float: right;
+		}
+		.blueButton{
+		background-color: #808080;
+		color: #00F;
+		font-size: 40px;
+		padding: 200px 300px;
+		border-radius: 10px;
+		border: none;
+		float: left;
+		}
+		div{
+		margin-left: 100px;
+		margin-right: 100px;
+		}
+	</style>
+	<title>GPIO with Flask!</title> <!-- what shows up on the tab of the browser -->
+</head>
+	<body> <!-- creates the buttons and sets up what happens when they are pushed -->
+		<div>
+		<center><h1>{{msg}}</h1>
+		<img src="https://i.redd.it/ku1neu504sh01.jpg" alt="backend-frontend ayy lmao" style="width:322px;height:445px"> <!-- self-roast in the form of an image comparing the front-end(pretty good) and the back-end(this file) -->
+		</center>
+		<form method="POST">
+			<button align="left" type="submit" class="blueButton"  name="blue" value="blueLed">Blue</button>
+			<button align="right" type="submit" class="redButton" name="red" value="redLed">Red</button>
+		</form>
+		</div>
+<body>
+</html>
+		
+```
