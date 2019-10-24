@@ -309,24 +309,53 @@ This was an introduction to GPIO using a bash script to blink an LED, it wasn't 
 
 ```python
 
-	#!bin/bash
+#!bin/bash
 
-	# this script makes 2 leds blink 10 times each
+# this script makes 2 leds blink 10 times each
 
-	gpio mode 0 out #sets up gpio pin
-	gpio mode 1 out #sets up gpio pin
+gpio mode 0 out #sets up gpio pin
+gpio mode 1 out #sets up gpio pin
 
 
-	for i in {1..10} #runs the loop 10 times
-	do
-	gpio write 0 1 #turns led on
-	gpio write 1 1 #turns other led on
-	sleep 0.5 #wait for half a second
-	gpio write 0 0 #turns led off
-	gpio write 1 0 #turns other led off
-	sleep 0.5 #wait for half a second
-	done
+for i in {1..10} #runs the loop 10 times
+do
+gpio write 0 1 #turns led on
+gpio write 1 1 #turns other led on
+sleep 0.5 #wait for half a second
+gpio write 0 0 #turns led off
+gpio write 1 0 #turns other led off
+sleep 0.5 #wait for half a second
+done
 
 ```
 	
 </details>
+
+### GPIO pins - Python
+
+This assignment taught us how to use python with GPIO, we want to remember how to use the GPIO libraries because that is something that is probably going to be a big thing in the future
+
+#### Code
+<details>
+	<summary> Blinkenlichten but python this time </summary>
+	
+	```python
+	#Activate LEDs via GPIO
+	#Written by David and Miles
+
+	import RPi.GPIO as GPIO
+	from time import sleep
+	#libraries
+	GPIO.setmode(GPIO.BOARD) #sets up pins
+	GPIO.setup(11,GPIO.OUT)
+	GPIO.setup(12,GPIO.OUT)
+
+	for i in range(0,10): #runs loop 10 times
+	    GPIO.output(12,1) #turns leds on
+	    GPIO.output(11,1)
+	    sleep(0.5) #half second wait
+	    GPIO.output(11,0) #turns leds off
+	    GPIO.output(12,0)
+	    sleep(0.5) #half second wait
+	GPIO.cleanup() #resets gpio
+	```
