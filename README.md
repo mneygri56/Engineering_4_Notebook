@@ -306,9 +306,9 @@ This was an introduction to GPIO using a bash script to blink an LED, it wasn't 
 #### Code
 <details>
 	<summary> Code to Blinkienlichten </summary>
-	
-	'''python
-	
+
+'''python
+
 	#!bin/bash
 
 	# this script makes 2 leds blink 10 times each
@@ -326,7 +326,7 @@ This was an introduction to GPIO using a bash script to blink an LED, it wasn't 
 	gpio write 1 0 #turns other led off
 	sleep 0.5 #wait for half a second
 	done
-	
-	'''
+
+'''
 	
 </details>
