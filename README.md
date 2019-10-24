@@ -295,4 +295,38 @@ main()
 </details>
 
 #### Problems
-We took a bit of time on figuring out how to clear the terminal. We eventually decided on printing 50 new lines, but then we saw that it was collapsing the 50 into one, so we had to go into settings and make it not collapse it into the one line. Also we wanted to spice our program up a bit and made the user input private, but that line didn't work in shell, so we had to run it in terminal. That was a weird error, but we got it cleared up.
+We took a bit of time on figuring out how to clear the terminal. We eventually decided on printing 50 new lines, but then we saw that it was collapsing the 50 into one, so we had to go into settings and make it not collapse it into the one line. Also we wanted to spice our program up a bit and made the user input private, but that line didn't work in shell, so we had to run it in terminal. That was a weird error, but we got it cleared up by using it in terminal.
+
+## GPIO stuff!!
+This is the start of gpio funTimes.
+### GPIO Pins - Bash
+
+This was an introduction to GPIO using a bash script to blink an LED, it wasn't too hard and it is useful for learning how to use the pins. 
+
+#### Code
+<details>
+	<summary> Code to Blinkienlichten </summary>
+	
+	'''python
+	
+	#!bin/bash
+
+	# this script makes 2 leds blink 10 times each
+
+	gpio mode 0 out #sets up gpio pin
+	gpio mode 1 out #sets up gpio pin
+
+
+	for i in {1..10} #runs the loop 10 times
+	do
+	gpio write 0 1 #turns led on
+	gpio write 1 1 #turns other led on
+	sleep 0.5 #wait for half a second
+	gpio write 0 0 #turns led off
+	gpio write 1 0 #turns other led off
+	sleep 0.5 #wait for half a second
+	done
+	
+	'''
+	
+</details>
