@@ -510,6 +510,9 @@ if __name__ == "__main__":
 
 GPIO.cleanup()
 ```
+
+</details>
+
 ## Putting it all together
 
 ### GPIO Pins - I2C
