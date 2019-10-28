@@ -25,7 +25,7 @@ done
 ### Hello Mathematica
 Here we had to figure out how to write a line of Mathematica to make a plot with sliders
 
-We couldn't retrieve the actual line of code that we used, but we had to use the Manipulate() function with the graph that we wanted to create two sliders that controlled constants in the equation\
+We couldn't retrieve the actual line of code that we used, but we had to use the Manipulate() function with the graph that we wanted to create two sliders that controlled constants in the equation
 
 ### Hello Python
 This boi is a die roller written in Python, we wrote a program to roll a die and print out a random number between 1 and 6
@@ -907,4 +907,4 @@ while True:
 </details>
 
 ##### Video
-[/Animation/stopMotion.mp4]
+[Animation](/Animation/stopMotion.mp4)
