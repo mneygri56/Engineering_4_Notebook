@@ -1,12 +1,31 @@
 # This is our Engineering 4 Notebook
 Table of Contents:
  - [Introduction Assignments](#Introduction-Assignments)
+	+ [hjello Raspberry Pi](#hello-raspberry-pi-zero)
+	+ [Hello Mathematica](#hello-mathematica)
+	+ [Python Introduction](#hello-python)
+	+ [Do stuff calculators do](#calculator)
+	+ [More Stuff Calculators do](#quadratic-solver)
+	+ [First Time w/Git](#hello-git)
+	+ [Making Class Accounts, which proceeded to screw us over for the rest of the year](#git-forks-and-clones)
  - [Python Stuff](#Awesome-Python-Code-Part-thats-really-fun-stuff)
+ 	+ [Some Coole things with strings that calculators can probably do, if you find the right one](#strings-and-loops)
+	+ [A convoluted calculator game for a party](#Man-Shaped-Pinata-Pronounced-Pin-ate-ae,-no-accent-whatsoever)
  - [GPIO Assignments](#GPIO-stuff)
+ 	+ [Cool and Fun GPIO and bash](#gpio-pins---bash)
+	+ [GPIO but python](#gpio-pins---python)
+	+ [GPIO bu fones](#gpio-pins---ssh)
  - [Hard Flask Stuff Angry Face](#Start-of-Flask-Stuff)
+ 	+ [The Easy One](#hello-flask)
+	+ [The Hard One, but its all good because calcuators can't do this](#gpio-pins---flask)
  - [Big Hard Assignments That take a While](#Putting-it-all-together)
+ 	+ [GPIO but we have some weird things that happened about 150 - 180 years ago that when using proper nomenclature, everyone in the room becomes slightly uncomfortable](#gpio-pins---i2c)
+	+ [French Revolution Time](#headless)
+	+ [Crazy trippy pictures](#pi-camera)
+	+ [What the pi is <i>supposed</i> to be for](#hack-your-stuff)
+	+ [Copy and pasta, or follow the tutorial and see where it gets you](#copypasta)
 ## Introduction Assignments
-<!-- toc -->
+
 ### Hello Raspberry Pi Zero
 This assigment was an introduction to bash scripts and pi stuff in general
 #### Code
