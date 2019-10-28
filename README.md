@@ -1,7 +1,7 @@
 # This is our Engineering 4 Notebook
 Table of Contents:
  - [Introduction Assignments](#Introduction-Assignments)
- - [Python Stuff](Awesome-Python-Code-Part-thats-really-fun-stuff)
+ - [Python Stuff](#Awesome-Python-Code-Part-thats-really-fun-stuff)
  - [GPIO Assignments](#GPIO-stuff!!)
  - [Hard Flask Stuff Angry Face](#Start-of-Flask-Stuff)
  - [Big Hard Assignments That take a While](#Putting-it-all-together)
