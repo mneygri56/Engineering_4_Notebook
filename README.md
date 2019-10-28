@@ -522,7 +522,7 @@ This one wasn't too hard, we had a bit of trouble importing random files because
 #### Code
 This assignment was to make an OLED screen print out the acceleration of the pi along x, y, and z axies(axisis? axes? axs?)
 <details>
-	<summary> The Code</summary>
+	<summary> Control the slaves from a master ... </summary>
 	
 ```python
 #Accelerometer numerical out
@@ -593,4 +593,4 @@ while True: #gets the accelerometer data, outputs it to the OLED in text form
  </details>
  
  ### Headless
- This program was kind of bad. We had to make a code that made a line plot that scrolled. We were able to make a line plot pretty easily, but our problem came with scrolling. We had to re draw the luine plot each time with a new start value. Eventually, we figured this out, but not before trying every otehr workaround.
+ This program was kind of bad, by bad I mean it wasn't fun, not that our program was bad, it was actually quite good thank you very much. We had to make a code that made a line plot that scrolled. We were able to make a line plot pretty easily, but our problem came with scrolling. We had to re draw the luine plot each time with a new start value. Eventually, we figured this out, but not before trying every otehr workaround.
