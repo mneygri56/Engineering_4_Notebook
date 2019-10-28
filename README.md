@@ -189,7 +189,7 @@ This project was setting up github on the pi. Github has sinced ceased to functi
 Yay hubGit™!!!
 
 ### Git Forks and Clones
-We forked a repository called class accounts, and cloned it to the pi, added our names to it, then committed it.
+We forked a repository called class accounts, and cloned it to the pi, added our names to it, then committed it. This assignment added a github repo inside our old repo for some reason, so every time we tried to commit, it would have an error that class accounts couldn't be committed, and I blame the failure of github on the pi on this event.
 
 We want to make sure we pull recent changes from github before pushing
 
