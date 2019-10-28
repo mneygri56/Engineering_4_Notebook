@@ -24,6 +24,7 @@ Table of Contents:
 	+ [Crazy trippy pictures](#pi-camera)
 	+ [What the pi is <i>supposed</i> to be for](#hack-your-stuff)
 	+ [Copy and pasta, or follow the tutorial and see where it gets you](#copypasta)
+- [Big Projects](#Big-projects)
 ## Introduction Assignments
 
 ### Hello Raspberry Pi Zero
@@ -938,4 +939,4 @@ while True:
 ## Big Project(s)
 ### Operation Yeet The Pi
 We boutta yeet that pi to the stratosphere ((More Info Later Once Complete))
-[YEET](mneygri56/Operation-Yeet-the-Pi)
+[YEET](github.com/mneygri56/Operation-Yeet-the-Pi)
