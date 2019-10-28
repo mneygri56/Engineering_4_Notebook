@@ -939,4 +939,4 @@ while True:
 ## Big Project(s)
 ### Operation Yeet The Pi
 We boutta yeet that pi to the stratosphere ((More Info Later Once Complete))
-[YEET](github.com/mneygri56/Operation-Yeet-the-Pi)
+[YEET](https://www.github.com/mneygri56/Operation-Yeet-the-Pi)
