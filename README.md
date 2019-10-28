@@ -779,5 +779,19 @@ myCamera.stop_preview() #stop broadcasting to screen
 ```
 
 </details>
-
+#### Images
 ![Image of Crazy](/Pictures/cartoon.jpg)
+
+![Trippy](/Pictures/emboss.jpg)
+
+![Recursion](/Pictures/gpen.jpg)
+
+![Posterize](/Pictures/posterize.jpg)
+
+![Negative](/Pictures/negative.jpg)
+
+![Solarize](/Pictures/solarize.jpg)
+
+Cool!
+### Hack Your Stuff
+
