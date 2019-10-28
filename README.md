@@ -6,6 +6,7 @@ Table of Contents:
  - [Hard Flask Stuff Angry Face](#start%20of%20flask%20stuff)
  - [Big Hard Assignments That take a While](#putting%20it%20all%20together)
 ## Introduction Assignments
+<!-- toc -->
 ### Hello Raspberry Pi Zero
 This assigment was an introduction to bash scripts and pi stuff in general
 #### Code
