@@ -1,10 +1,10 @@
 # This is our Engineering 4 Notebook
 Table of Contents:
  - [Introduction Assignments](#Introduction-Assignments)
- - [Python Stuff](#awesome%20python%20code%20part%20thats%20really%20fun%20stuff)
- - [GPIO Assignments](#gpio%20stuff!!)
- - [Hard Flask Stuff Angry Face](#start%20of%20flask%20stuff)
- - [Big Hard Assignments That take a While](#putting%20it%20all%20together)
+ - [Python Stuff](Awesome-Python-Code-Part-thats-really-fun-stuff)
+ - [GPIO Assignments](#GPIO-stuff!!)
+ - [Hard Flask Stuff Angry Face](#Start-of-Flask-Stuff)
+ - [Big Hard Assignments That take a While](#Putting-it-all-together)
 ## Introduction Assignments
 <!-- toc -->
 ### Hello Raspberry Pi Zero
