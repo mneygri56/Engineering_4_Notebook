@@ -14,7 +14,7 @@ Table of Contents:
  - [GPIO Assignments](#GPIO-stuff)
  	+ [Cool and Fun GPIO and bash](#gpio-pins---bash)
 	+ [GPIO but python](#gpio-pins---python)
-	+ [GPIO bu fones](#gpio-pins---ssh)
+	+ [GPIO but fones](#gpio-pins---ssh)
  - [Hard Flask Stuff Angry Face](#Start-of-Flask-Stuff)
  	+ [The Easy One](#hello-flask)
 	+ [The Hard One, but its all good because calcuators can't do this](#gpio-pins---flask)
