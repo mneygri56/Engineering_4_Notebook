@@ -934,3 +934,8 @@ while True:
 
 ##### Video
 [Animation](https://youtu.be/NJuUF_IHOos)
+
+## Big Project(s)
+### Operation Yeet The Pi
+We boutta yeet that pi to the stratosphere ((More Info Later Once Complete))
+[YEET](mneygri56/Operation-Yeet-the-Pi)
