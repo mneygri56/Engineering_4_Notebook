@@ -786,7 +786,7 @@ myCamera.stop_preview() #stop broadcasting to screen
 
 ![Recursion](/Pictures/gpen.jpg)
 
-![Posterize](/Pictures/posterize.jpg)
+![Posterise](/Pictures/posterise.jpg)
 
 ![Negative](/Pictures/negative.jpg)
 
@@ -795,3 +795,116 @@ myCamera.stop_preview() #stop broadcasting to screen
 Cool!
 ### Hack Your Stuff
 
+We had to connect an alarm to the and a switch to make it go off when the switch is flicked. We had a bit of trouble, and if we were to tell ourselves one thing, it would be that the plate thing is a speaker, not a magnetic sensor or w/e we thought it was.
+
+#### Code:::
+
+<details>
+	<summary> Killing everyone's ears one siren at a time</summary>
+
+```python
+#Switch-activated alarm
+#Written by David and Miles
+
+import RPi.GPIO as G
+import time
+from gpiozero import MotionSensor
+#libraries
+switchIn = True
+G.setwarnings(False) #gpio setup
+G.setmode(G.BCM)
+G.setup(18, G.OUT)
+G.setup(17,G.IN)
+while True: #infinite loop, when the switch is thrown, give the alarm power
+    switchIn = G.input(17)
+    
+    if(not switchIn):
+        G.output(18, G.LOW)
+        print("Low")
+    else:
+        G.output(18, G.HIGH)
+        print("High")
+```
+
+</details>
+
+### Copypasta
+Basically, we got a couple of tutorials and followed them, we know how to use google to tell us what to do now.
+#### Parent Detector
+We used a PIR sensor to control a camera so that we could tell if someone went and messed with the pi
+##### Code
+<details>
+	<summary> Find your parents messing with your stuff</summary>
+	
+```python
+#Detect people in your room
+#Written by David and Miles
+from gpiozero import MotionSensor
+from picamera import PiCamera
+from time import sleep
+from datetime import datetime
+
+#Define camera and pir sensor
+camera = PiCamera()
+pir = MotionSensor(17)
+
+
+while True:
+	#Filename is the date and time
+    filename = "intruder {0:%Y}-{0:%m}-{0:%d} {0:%H}-{0:%M}-{0:%S}.h264".format(datetime.now())
+    #When there is motion, start recording until there is no movement
+    pir.wait_for_motion()
+    camera.start_recording(filename)
+    print("started video")
+    pir.wait_for_no_motion()
+    camera.stop_recording()
+    print("video traken")
+```
+
+</details>
+
+#### Stop Motion
+
+The goal of this project was to make a stop motion animation of something creative. Most of the time spent on this project was getting the updates needed for libav. We made "A Flash Drive's Journey"
+
+##### Code
+
+<details>
+	<summary> Making Of</summary>
+Press Button, Take Picture.
+	
+```python
+  
+#Stop Motion Code
+#Written by David and Miles
+
+from picamera import PiCamera
+from gpiozero import Button
+
+camera = PiCamera()
+button = Button(17)
+#set the camera rotation to 0
+camera.rotation = 0
+#start the camera preview with an opacity of 200/255
+camera.start_preview(alpha = 200)
+#loop control variable
+frame = 1
+while True:
+    try:
+    	#wait for a button press and then take a pictue
+        button.wait_for_press()
+        camera.capture('/home/pi/Documents/Engineering_4_Notebook/Animation/frame%03d.jpg' % frame)
+        #let the user know a picture has been taken
+        print("picture taken")
+        #make sure the filename is right
+        frame += 1
+    except KeyboardInterrupt:
+    	#when ^C is pressed, end the preview and program
+        camera.stop_preview()
+        break
+```
+
+</details>
+
+##### Video
+[/Animation/stopMotion.mp4]
