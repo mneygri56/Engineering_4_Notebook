@@ -779,7 +779,9 @@ myCamera.stop_preview() #stop broadcasting to screen
 ```
 
 </details>
+
 #### Images
+
 ![Image of Crazy](/Pictures/cartoon.jpg)
 
 ![Trippy](/Pictures/emboss.jpg)
@@ -907,4 +909,4 @@ while True:
 </details>
 
 ##### Video
-[Animation](/Animation/stopMotion.mp4)
+[Animation](https://youtu.be/NJuUF_IHOos)
