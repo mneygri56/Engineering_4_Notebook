@@ -593,4 +593,191 @@ while True: #gets the accelerometer data, outputs it to the OLED in text form
  </details>
  
  ### Headless
- This program was kind of bad, by bad I mean it wasn't fun, not that our program was bad, it was actually quite good thank you very much. We had to make a code that made a line plot that scrolled. We were able to make a line plot pretty easily, but our problem came with scrolling. We had to re draw the luine plot each time with a new start value. Eventually, we figured this out, but not before trying every otehr workaround.
+Step 1: Get a guillotine
+
+Step 2: use it...
+
+This program was kind of bad, by bad I mean it wasn't fun, not that our program was bad, it was actually quite good thank you very much. We had to make a code that made a line plot that scrolled. We were able to make a line plot pretty easily, but our problem came with scrolling. We had to re draw the luine plot each time with a new start value. Eventually, we figured this out, but not before trying every otehr workaround.
+
+<details> 
+	<summary> chop the head off the pi </summary>
+
+```python
+#Accelerometer graph
+#Written by David and Miles
+
+import time
+
+import Adafruit_GPIO.SPI as SPI
+import Adafruit_SSD1306
+#libraries
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
+from PIL import ImageOps
+# Import the LSM303 module.
+import Adafruit_LSM303
+import math
+
+
+# Create a LSM303 instance.
+lsm303 = Adafruit_LSM303.LSM303()
+# Raspberry Pi pin configuration:
+RST = 24
+# Note the following are only used with SPI:
+DC = 23
+SPI_PORT = 0
+SPI_DEVICE = 0
+
+# Note you can change the I2C address by passing an i2c_address parameter like:
+disp = Adafruit_SSD1306.SSD1306_128_64(rst=RST, i2c_address=0x3D)
+
+# Initialize library.
+disp.begin()
+
+# Clear display.
+disp.clear()
+disp.display()
+
+# Create blank image for drawing.
+# Make sure to create image with mode '1' for 1-bit color.
+width = disp.width
+height = disp.height
+image = Image.new('1', (width, height))
+font = ImageFont.load_default()
+# Get drawing object to draw on image.
+draw = ImageDraw.Draw(image)
+leftText = Image.new('1', (height, width))
+drawLeft = ImageDraw.Draw(leftText)
+pi = 3.14159265358979323846264338327950
+yPos = 48
+currX = 1
+values = [48]
+startX = 0
+#start of real code
+def realMap(number, lowFirst, highFirst,lowSecond, highSecond):
+    newNumber =(number-lowFirst)/(highFirst-lowFirst)*(highSecond-lowSecond)+lowSecond
+    return newNumber
+
+while True: #gets the data from the accelerometer, then outputs it to the OLED screen
+    
+    accel, mag = lsm303.read()
+    accel_x, accel_y, accel_z = accel
+    draw.rectangle((0,0,width,height),0,0)
+    drawLeft.text((17,5), "a(m/s^2)", fill = 125)
+    w = leftText.rotate(90, expand=1)
+    image.paste(w)
+    draw.line((16,0,16,48), fill = 255)
+    draw.line((16,48,128,48), 255)
+    draw.text((32,50), "Time (seconds)", font=font,fill=125)
+        
+    
+    #map the acceleration to a better outline
+    y = realMap(accel_y, -1000, 1000, 0, 32)
+    #put the values on the graph
+    yPos = 48-y
+    values.append(yPos)
+    currX+=1
+    startX = currX-112
+    #draw all the lines to make a line plot
+    if startX<0:
+        startX = 0
+    for xPos in range(112):
+        if(xPos>currX-1):
+            break
+        draw.line((16+xPos, values[startX+xPos-1], xPos+17, values[startX+xPos]), fill = 255)
+    disp.image(image)
+    disp.display()
+    
+```
+
+</details>
+
+### Pi Camera
+We did three assignments so we could take selfies with the pi... guys, if you want to take a selfie, just use your phone, this is a little too much. Also, we had some cool recursive pics. We learned to make the preview window slightly less opaque so that we could kill the program if it messed up.
+
+#### Code
+Three part assignment, not too bad. 
+
+<details>
+	<summary> Part One </summary>
+
+```python
+
+#First Camera program
+#Written by David and Miles
+
+from picamera import PiCamera #importing libraries and functions
+from  time import sleep
+
+
+
+myCamera = PiCamera() #declares camera
+#SPOOKTOBER (transparency joke)
+myCamera.start_preview(alpha = 245) #broadcasts the camera's output to screen, slightly transparent
+sleep(5) #pause for 5 seconds
+
+myCamera.stop_preview() #stop broadcasting camera output
+```
+
+</details>
+
+<details>
+	<summary> Part Two </summary>
+
+```python
+#Second Camera Program
+#Written by David and Miles
+
+from picamera import PiCamera
+from  time import sleep
+#import functions
+effects = ['none', 'negative', 'solarize', 'sketch', 'denoise', 'emboss', 'oilpaint',
+           'hatch', 'gpen', 'pastel', 'watercolor', 'film', 'blur', 'saturation',
+           'colorswap', 'washedout', 'posterise', 'colorpoint', 'colorbalance', 'cartoon', 'deinterlace1', 'deinterlace2'] #array of all effects
+myCamera = PiCamera() #declares camera
+myCamera.start_preview() #broadcasts camera view to screen
+for effect in effects: #for-each loop, shows each effect for 3 seconds, then goes to next one
+    myCamera.image_effect = effect
+    myCamera.annotate_text = "This effect is: "+effect
+    sleep(3)
+    if effect == 'gpen' or effect == 'solarize' or effect == 'negative' or effect == 'posterise' or effect == 'emboss' or effect == 'cartoon': #takes pictures when a specific effect is active
+        myCamera.annotate_text = "Taking picture with: "+effect
+        sleep(3)
+        myCamera.annotate_text = "3"
+        sleep(1)
+        myCamera.annotate_text = "2"
+        sleep(1)
+        myCamera.annotate_text = "1"
+        sleep(1)
+        myCamera.annotate_text = "This effect is: "+effect
+        myCamera.capture(effect+'.jpg')
+
+myCamera.stop_preview()
+```
+
+</details>
+
+<details>
+	<summary> Part Three </summary>
+
+```python
+#Third Camera Program
+#Written by David and Miles
+
+from picamera import PiCamera
+from  time import sleep
+#libraries
+
+myCamera = PiCamera()
+myCamera.start_preview(alpha = 200) #starts a preview with transparency
+myCamera.image_effect = 'cartoon' #applies effect to camera
+myCamera.start_recording('myVid.h264') #starts to record video
+sleep(10) #wait 10 seconds
+myCamera.stop_recording() #stop recording video
+myCamera.stop_preview() #stop broadcasting to screen	
+```
+
+</details>
+
+![Image of Crazy](/Pictures/cartoon.jpg)
