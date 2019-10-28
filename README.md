@@ -10,7 +10,7 @@ Table of Contents:
 	+ [Making Class Accounts, which proceeded to screw us over for the rest of the year](#git-forks-and-clones)
  - [Python Stuff](#Awesome-Python-Code-Part-thats-really-fun-stuff)
  	+ [Some Coole things with strings that calculators can probably do, if you find the right one](#strings-and-loops)
-	+ [A convoluted calculator game for a party](#Man-Shaped-Pinata-Pronounced-Pin-ate-ae,-no-accent-whatsoever)
+	+ [A convoluted calculator game for a party](#Man-Shaped-Pinata-Pronounced-Pin-ate-ae-no-accent-whatsoever)
  - [GPIO Assignments](#GPIO-stuff)
  	+ [Cool and Fun GPIO and bash](#gpio-pins---bash)
 	+ [GPIO but python](#gpio-pins---python)
