@@ -622,7 +622,7 @@ Step 1: Get a guillotine
 
 Step 2: use it...
 
-This program was kind of bad, by bad I mean it wasn't fun, not that our program was bad, it was actually quite good thank you very much. We had to make a code that made a line plot that scrolled. We were able to make a line plot pretty easily, but our problem came with scrolling. We had to re draw the luine plot each time with a new start value. Eventually, we figured this out, but not before trying every otehr workaround.
+This program was kind of bad, by bad I mean it wasn't fun, not that our program was bad, it was actually quite good thank you very much. We had to make a code that made a line plot that scrolled. We were able to make a line plot pretty easily, but our problem came with scrolling. We had to redraw the line plot each time with a new start value. Eventually, we figured this out, but not before trying every other workaround.
 
 <details> 
 	<summary> chop the head off the pi </summary>
@@ -807,19 +807,39 @@ myCamera.stop_preview() #stop broadcasting to screen
 
 #### Images
 
+<details>
+	<summary>Crazy Trippy</summary>
+	
 ![Image of Crazy](/Pictures/cartoon.jpg)
-
+</details>
+<details>
+	<summary>Even trippier</summary>
+	
 ![Trippy](/Pictures/emboss.jpg)
-
+</details>
+<details>
+	<summary>Even trippier</summary>
+	
 ![Recursion](/Pictures/gpen.jpg)
-
+</details>
+<details>
+	<summary>Even trippier</summary>
+	
 ![Posterise](/Pictures/posterise.jpg)
 
+</details>
+
+<details>
+	<summary>Even trippier</summary>
+	
 ![Negative](/Pictures/negative.jpg)
-
+</details>
+<details>
+	<summary>Even trippier</summary>
 ![Solarize](/Pictures/solarize.jpg)
-
+</details>
 Cool!
+</details>
 ### Hack Your Stuff
 
 We had to connect an alarm to the and a switch to make it go off when the switch is flicked. We had a bit of trouble, and if we were to tell ourselves one thing, it would be that the plate thing is a speaker, not a magnetic sensor or w/e we thought it was.
