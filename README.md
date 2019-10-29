@@ -30,7 +30,7 @@ Table of Contents:
 ### Hello Raspberry Pi Zero
 This assigment was an introduction to bash scripts and pi stuff in general
 #### Code
-Our code here wasn't too complicated, so we spiced it up a bit, see for yourself;
+Our code here wasn't too complicated, so we spiced it up a bit, see for yourself:
 <details>
   <summary>Code</summary>
 	
@@ -131,7 +131,7 @@ Ever been in math class and wanted an easy way to calculate those weird quadrati
 This program prints out the roots of a quadratic given the coefficients, call now and we'll double your order, just call 1-800-not-scam
 
 <details>
-  <summary>Act fast, our first 30 customers get a free code with their order</summary>
+  <summary>Act fast, our first 30 customers get a free code with their order (restrictions may apply)</summary>
   
 ```python
 #Quadratic Solver
