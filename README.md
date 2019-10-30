@@ -818,24 +818,24 @@ myCamera.stop_preview() #stop broadcasting to screen
 ![Trippy](/Pictures/emboss.jpg)
 </details>
 <details>
-	<summary>Even trippier</summary>
+	<summary>Recursion With Gpen</summary>
 	
 ![Recursion](/Pictures/gpen.jpg)
 </details>
 <details>
-	<summary>Even trippier</summary>
+	<summary>Posterise</summary>
 	
 ![Posterise](/Pictures/posterise.jpg)
 
 </details>
 
 <details>
-	<summary>Even trippier</summary>
+	<summary>Negative</summary>
 	
 ![Negative](/Pictures/negative.jpg)
 </details>
 <details>
-	<summary>Even trippier</summary>
+	<summary>Solarize</summary>
 ![Solarize](/Pictures/solarize.jpg)
 </details>
 Cool!
