@@ -836,6 +836,7 @@ myCamera.stop_preview() #stop broadcasting to screen
 </details>
 <details>
 	<summary>Solarize</summary>
+	
 ![Solarize](/Pictures/solarize.jpg)
 </details>
 Cool!
