@@ -841,6 +841,7 @@ myCamera.stop_preview() #stop broadcasting to screen
 </details>
 Cool!
 </details>
+
 ### Hack Your Stuff
 
 We had to connect an alarm to the and a switch to make it go off when the switch is flicked. We had a bit of trouble, and if we were to tell ourselves one thing, it would be that the plate thing is a speaker, not a magnetic sensor or w/e we thought it was.
